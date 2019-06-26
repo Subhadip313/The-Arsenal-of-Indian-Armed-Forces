@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+<head><title>Army</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+   /* Style the Image Used to Trigger the Modal */
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.myclass{
+  background-color: #333;
+  color: #fff;
+   float: left;
+  width: 85%;
+  padding-left: 20px;
+}
+.myclass1{
+        overflow: hidden;
+        background-color:  #111;
+
+      
+       }
+      .myclass1 a{
+        display: block;
+        color:  #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 22px;
+      }
+      .myclass1 a:hover{
+        background-color: green;
+        color: white;
+      }
+      .democlass {
+  color: red;
+}
+.button {
+ padding: 10px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  
+  cursor: pointer;
+
+}
+
+@media screen and (max-width: 800px) {
+  .myclass{
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div id="up" class="image">
+    <img src="tank.jpg" style="height:100%; width:100%">
+    <div class="text1">
+        The Arsenal of Indian Armed Forces
+    </div>
+    
+    </div>
+    <div id="nav" class="navbar">
+    
+    <a  href="index.html">Home</a>
+    <a class="active" href="army.html">Army</a>
+    <a href="navy.html">Navy</a>
+    <a href="airforce.html">Airforce</a>
+    <a href="weapon.html">Weapons</a>
+    
+    <a href="history.html">History</a>
+    <a  href="index.html#about">About</a>
+     <object  style="margin:4px;" align="right"><button class="button" type="button" onclick="myFunction()">Night mode</button>
+       <button class="button" onclick="location.reload();">Day mode</button></object>
+</div>
+
+<div id="me4" style=" " class="row">
+    <div class="leftcolumn1">
+        <div id="me">
+    <div id="mydiv1" class="sidenav">
+              <a href="#intro">Intro</a>
+              <a href="#index">List of operations</a>
+              <a href="#history">History</a>
+              <a href="#operation">Operations</a>
+              <a href="#mission">Mission</a>
+             
+              <a href="#per">Personnel</a>
+              <a href="#eqp">Combat Vehicles</a>
+              <a href="#air">Army Aviation</a>
+              <a href="weapon.html">Weapons</a>
+              <a href="#up">Top</a>
+            </div></div>
+    </div>
+    <div id="mydiv" class="rightcolumn1">
+        <div id="me2" style="background-color: #f1f1f1; width:100%;">
+             <div  id="mySidenav1"class="sidenav1">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+    <a  href="index.html">Home</a>
+    <button class="dropdown-btn act">Army 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#intro">Intro</a>
+              <a href="#index">List of operations</a>
+              <a href="#history">History</a>
+              <a href="#operation">Operations</a>
+              <a href="#mission">Mission</a>
+                <a href="#per">Personnel</a>
+              <a href="#eqp">Combat Vehicles</a>
+              <a href="#air">Army Aviation</a>
+              <a href="weapon.html">Weapons</a>
+   </div>
+    <a href="navy.html">Navy</a>
+    <a href="airforce.html">Airforce</a>
+    <a href="weapon.html">Weapons</a>
+    
+    
+    <a href="history.html">History</a>
+    <a  href="index.html#about">About</a><br>
+    <object style="margin:10px;"><button class="button" type="button" onclick="myFunction()">Night mode</button>
+    <button class="button" onclick="location.reload();">Day mode</button></object>
+</div>
+<div >
+<span id="open" style="font-size:30px;cursor:pointer;color:#111;" onclick="openNav()">&#9776; Menu</span></div></div>
+        <div >
+        <h2 id="intro">Introduction</h2>
+        <div id="res">
+            <span style="font-size:24px; color:tomato;">The Indian Army</span> is the land-based branch and the largest component of Indian Armed Forces. The President of India is the Supreme Commander of the Indian Army, and it is commanded by the Chief of Army Staff (COAS), who is a four-star general. Two officers have been conferred with the rank of field marshal, a five-star rank, which is a ceremonial position of great honour. The Indian Army originated from the armies of the East India Company, which eventually became the British Indian Army, and the armies of the princely states, which finally became the national army after independence. The units and regiments of the Indian Army have diverse histories and have participated in a number of battles and campaigns across the world, earning a large number of battle and theatre honours before and after Independence.
+
+            <p>The primary mission of the Indian Army is to ensure national security and national unity, defending the nation from external aggression and internal threats, and maintaining peace and security within its borders. It conducts humanitarian rescue operations during natural calamities and other disturbances, like Operation Surya Hope, and can also be requisitioned by the government to cope with internal threats. It is a major component of national power alongside the Indian Navy and the Indian Air Force. The army has been involved in four wars with neighbouring Pakistan and one with China. Other major operations undertaken by the army include: Operation Vijay, Operation Meghdoot and Operation Cactus. Apart from conflicts, the army has conducted large peace time exercises like Operation Brasstacks and Exercise Shoorveer, and it has also been an active participant in numerous United Nations peacekeeping missions including those in: Cyprus, Lebanon, Congo, Angola, Cambodia, Vietnam, Namibia, El Salvador, Liberia, Mozambique, South Sudan and Somalia.</p>
+
+            <p>The Indian Army has a regimental system, but is operationally and geographically divided into seven commands, with the basic field formation being a division. It is an all-volunteer force and comprises more than 80% of the country's active defence personnel. It is the 2nd largest standing army in the world, with 1,237,117 active troops and 960,000 reserve troops. The army has embarked on an infantry modernisation program known as Futuristic Infantry Soldier As a System (F-INSAS), and is also upgrading and acquiring new assets for its armoured, artillery and aviation branches.</p>
+        </div>
+        
+
+            <div style="border: 2px solid green; padding:8px; margin:10px;" >
+                <h2 id="index">History</h2>
+                <ul>
+                    <li><a href="#1" >British Indian Army</a></li>
+                    <li><a href="#2" >World wars</a></li>
+                    <li><a href="#3" >Independence</a></li>
+                </ul>
+                <h2 id="index">Operations</h2>
+                <ul>
+            <li><a href="#4" >First Kashmir War 1947</a></li>
+            <li><a href="#5" >Annexation of Hyderabad 1948</a></li>
+            <li><a href="#6" >Medical assistance during Korean War (1950–1953)
+            </a></li>
+            <li><a href="#7" >Annexation of Goa, Daman and Diu 1961</a></li>
+            <li><a href="#8" >Sino-Indian War 1962</a></li>
+            <li><a href="#9" >Indo-Pakistani War of 1965</a></li>
+            <li><a href="#10" >Sino-Indian Conflict 1967</a></li>
+            <li><a href="#11" >Operation against the Naxalites during 1971</a></li>
+            <li><a href="#12" >Bangladesh Liberation War of 1971</a></li>
+            <li><a href="#13" >Siachen conflict 1984</a></li>
+            <li><a href="#14" >Counter-insurgency activities</a></li>
+            <li><a href="#15" >Kargil war 1999</a></li>
+            <li><a href="#16" >United Nations peacekeeping missions</a></li>
+            <li><a href="#17" >Indo-China Doklam Issue</a></li>
+            </ul>
+                </div>
+          <h1 id="history">History</h1>
+                    <div id="1"class="clearfix" style="padding:10px;  margin:10px;">
+              
+                    <h3>British Indian Army</h3>
+                    <div class="div" style="border:1px  solid black; margin-left:10px;">
+                    <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/5/52/RML7pounderMountanGunHazaraBattery1895.jpg">
+                    <img  src="https://upload.wikimedia.org/wikipedia/commons/5/52/RML7pounderMountanGunHazaraBattery1895.jpg" width="100%" height="auto"></a><br><p style="font-size: 14px; color: blue;">
+                    Mountain Battery with RML7 pounder "Steel Gun" Mountain Gun in Review Order. Left to right Naick, Havaldar, Subadar (Sikhs) and Gunner (Punjabi Musalman) circa 1895.</p>
+                </div>
+                    
+                    <p>A Military Department was created within the Government of the East India Company at Kolkata in the year 1776. Its main function was to sift and record orders relating to the Army that were issued by various Departments of the East India Company for the territories under its control.</p>
+
+                    <p>With the Charter Act of 1833, the Secretariat of the Government of the East India Company was reorganised into four Departments, including a Military Department. The army in the Presidencies of Bengal, Bombay and Madras functioned as respective Presidency Armies until 1 April 1895 when they were unified into a single Indian Army. For administrative convenience, it was divided into four commands at that point, namely Punjab (including the North West Frontier), Bengal, Madras (including Burma) and Bombay (including Sind, Quetta and Aden).</p>
+
+                    <p>The British Indian Army was a critical force for the primacy of the British Empire both in India and across the world. Besides maintaining the internal security of the British Raj, the Army fought in many other theatres: the Anglo-Burmese Wars, First and Second Anglo-Sikh Wars, First, Second and Third Anglo-Afghan Wars, First and Second Opium Wars in China, Abyssinia, and the Boxer Rebellion in China.</p></div>
+                <div id="2"class="clearfix"  style="padding:10px;">
+                    <h3>World wars</h3>
+                    <div class="div" style="border:1px solid black; margin-left:10px;">
+                    <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/3/35/SikhsInFrancePostcard.jpg">
+                    <img  src="https://upload.wikimedia.org/wikipedia/commons/3/35/SikhsInFrancePostcard.jpg" width="100%" height="auto"></a><br><p style="font-size: 14px; color: blue;">
+                    French postcard depicting the arrival of 15th Sikh Regiment in France during World War I. The postcard reads, "Gentlemen of India marching to chasten the German hooligans."</p>
+                </div>
+                    
+                    <p>In the 20th century, the Indian Army was a crucial adjunct to the British forces in both world wars. 1.3 million Indian soldiers served in World War I (1914–1918) with the Allies, in which 74,187 Indian troops were killed or missing in action. In 1915 there was a mutiny by Indian soldiers in Singapore. The United Kingdom made promises of self-governance to the Indian National Congress in return for its support but reneged on them after the war, following which the Indian Independence movement gained strength.</p>
+
+<p>The "Indianisation" of the British Indian Army began with the formation of the Prince of Wales Royal Indian Military College at Dehradun in March 1912 with the purpose of providing education to the scions of aristocratic and well-to-do Indian families, and to prepare selected Indian boys for admission into the Royal Military College, Sandhurst. Indian officers were given a King's commission after passing out and were posted to one of the eight units selected for Indianisation. Because of the slow pace of Indianisation, with just 69 officers being commissioned between 1918 and 1932, political pressure was applied leading to the formation of the Indian Military Academy in 1932 and greater numbers of officers of Indian origin being commissioned.</p>
+
+<p>In World War II Indian soldiers fought alongside the Allies. In 1939, British officials had no plan for expansion and training of Indian forces, which comprised about 130,000 men (in addition there were 44,000 men in British units in India in 1939). Their mission was internal security and defence against a possible Soviet threat through Afghanistan. As the war progressed, the size and role of the Indian Army expanded dramatically, and troops were sent to battlefronts as soon as possible. The most serious problem was lack of equipment. Indian units served in Burma, where in 1944–45, five Indian divisions were engaged along with one British and three African divisions. Even larger numbers operated in the Middle East. Some 87,000 Indian soldiers died in the war. By the end of the war it had become the largest volunteer army in history, rising to over 2.5 million men in August 1945.</p>
+
+</p>In the African and Middle-Eastern Campaigns, captured Indian troops were given a choice to join the German Army to eventually "liberate" India from Great Britain instead of being sent to POW camps. These men, along with Indian students who were in Germany when the war broke out, made up what was called the Free India Legion. They were originally intended as pathfinders for German forces in Asia, but were soon sent to help guard the Atlantic Wall. Few who were part of the Free India Legion ever saw any combat, and very few were ever stationed outside Europe. At its height the Free India Legion had over 3,000 troops in its ranks.</p>
+
+<p>Indian POWs also joined the Indian National Army which was allied with the Empire of Japan. It was raised by a former colonel of the British Indian Army (Gen) Mohan Singh, but later led by Netaji Subhas Chandra Bose and Rash Bihari Bose. With the fall of Singapore in 1942, about 40,000 Indian soldiers were captured. They were given a choice and over 30,000 joined the Indian National Army. Those who refused became POWs and were mostly shipped to New Guinea. After initial success it was defeated along with the Japanese, but it had a huge impact on the Indian independence movement. Similar organisations were also formed in Germany and Japan.</p>
+<div class="clearfix">
+    <div class="img-container">
+<a target="_blank" href="https://cms.qz.com/wp-content/uploads/2016/04/world-war-ii.jpg?quality=75&strip=all&w=410&h=231.64999999999998">
+                    <img  src="https://cms.qz.com/wp-content/uploads/2016/04/world-war-ii.jpg?quality=75&strip=all&w=410&h=231.64999999999998" width="100%" height="auto"></a></div>
+                    <div class="img-container">
+                    <a target="_blank" href="https://d1u4oo4rb13yy8.cloudfront.net/article/73458-lpaspnewky-1510324187.jpg">
+                    <img  src="https://d1u4oo4rb13yy8.cloudfront.net/article/73458-lpaspnewky-1510324187.jpg" width="100%" height="auto"></a></div>
+                    <div class="img-container">
+                    <a target="_blank" href="http://im.rediff.com/news/2014/jul/09war1.jpg">
+                    <img  src="http://im.rediff.com/news/2014/jul/09war1.jpg" width="100%" height="auto"></a></div>
+                </div>
+            </div>
+                    <div id="3"class="clearfix"  style="padding:10px;  margin:10px; ">
+                    <h3>Independence</h3>
+                    <div class="div" style="border:1px solid black; margin-left:10px;">
+                    <a target="_blank" href="https://indianculturalforum.in/wp-content/uploads/2018/08/Independence-Day-Shamsul.jpg">
+                    <img  src="https://indianculturalforum.in/wp-content/uploads/2018/08/Independence-Day-Shamsul.jpg" width="100%" height="auto"></a><br><p style="font-size: 14px; color: blue;">August 15, 1947 was a historical day in the eventful history of India. India got independence after a long and heroic struggle against the British colonial masters. India's independence was also a milestone in the on-going anti-imperialist liberation struggles world-over.
+                    </p>
+                </div>
+                    
+                    <p>Upon independence and the subsequent Partition of India in 1947, four of the ten Gurkha regiments were transferred to the British Army. The rest of the British Indian Army was divided between the newly created nations of India and Pakistan. The Punjab Boundary Force, which had been formed to help police the Punjab during the partition period, was disbanded, and Headquarters Delhi and East Punjab Command was formed to administer the area.</p>
+
+<p>The departure of virtually all senior British officers following independence and their replacement by Indian officers meant many of the latter held acting ranks several ranks above their substantive ones. For instance, S. M. Shrinagesh, the ground forces commander of Indian forces during the first Indo-Pak War of 1947-49 (and the future third COAS) was first an acting major-general and then an acting lieutenant-general during the conflict while holding the substantive rank of major, and only received a substantive promotion to lieutenant-colonel in August 1949. Gopal Gurunath Bewoor, the future ninth COAS, was an acting colonel at his promotion to substantive major from substantive captain in 1949, while future lieutenant-general K. P. Candeth was an acting brigadier (substantive captain) at the same time.</p>
+
+<p>Army Day is celebrated on 15 January every year in India, in recognition of Lieutenant General K. M. Cariappa's taking over as the first commander-in-chief of the Indian Army from General Sir Francis Butcher, the last British commander-in-chief of India, on 15 January 1949. With effect from 26 January 1950, the date India became a republic, all active-duty Indian Army officers formerly holding the King's Commission were recommissioned and confirmed in their substantive ranks.</p></div>
+<div style="border:2px solid black; padding:8px; margin:10px;">
+      <h1 id="operation">Operations</h1>
+      <ul>
+            <li><a href="#4" >First Kashmir War 1947</a></li>
+            <li><a href="#5" >Annexation of Hyderabad 1948</a></li>
+            <li><a href="#6" >Medical assistance during Korean War (1950–1953)
+            </a></li>
+            <li><a href="#7" >Annexation of Goa, Daman and Diu 1961</a></li>
+            <li><a href="#8" >Sino-Indian War 1962</a></li>
+            <li><a href="#9" >Indo-Pakistani War of 1965</a></li>
+            <li><a href="#10" >Sino-Indian Conflict 1967</a></li>
+            <li><a href="#11" >Operation against the Naxalites during 1971</a></li>
+            <li><a href="#12" >Bangladesh Liberation War of 1971</a></li>
+            <li><a href="#13" >Siachen conflict 1984</a></li>
+            <li><a href="#14" >Counter-insurgency activities</a></li>
+            <li><a href="#15" >Kargil war 1999</a></li>
+            <li><a href="#16" >United Nations peacekeeping missions</a></li>
+            <li><a href="#17" >Indo-China Doklam Issue</a></li>
+            </ul>
+      
+        <div>
+        <h3 id="4">First Kashmir War (1947)</h3>
+        Immediately after independence, tensions between India and Pakistan began to boil over, and the first of three full-scale wars between the two nations broke out over the then princely state of Kashmir. The Maharaja of Kashmir wanted to have a standstill position. Since Kashmir was a Muslim majority state, Pakistan wanted to make Kashmir a Pakistani territory. As a result, Pakistan invaded Kashmir on 22 October 1947, causing Maharaja Hari Singh to look to India, specifically to Lord Mountbatten of Burma, the governor general, for help. He signed the Instrument of Accession to India on 26 October 1947. Indian troops were airlifted to Srinagar from 27 October dawn onwards. This contingent included General Thimayya who distinguished himself in the operation and in the years that followed became a Chief of the Indian Army. An intense war was waged across the state and former comrades found themselves fighting each other. Pakistan suffered significant losses. Its forces were stopped on the line formed which is now called LOC (Line of Control).[citation needed] An uneasy UN sponsored peace returned by the end of 1948 with Indian and Pakistani soldiers facing each other directly on the Line of Control, which has since divided Indian-held Kashmir from Pakistan-held Kashmir. A number of UN resolutions  were passed calling for a plebiscite to be held in Kashmir to determine accession to India or Pakistan only after Pakistan withdrew its army from Kashmir. A precondition to the resolution was for Pakistan and India to return to a state of "as was" prior to the conflict. Pakistan would withdraw all tribesmen and Pakistani nationals brought in to fight in Kashmir. With Pakistan refusing to pull back there could be no further dialogue on fulfilling the UN resolution. Tensions between India and Pakistan, largely over Kashmir, have never been entirely eliminated.
+      </div>
+      <div>
+        <h3 id="5">Annexation of Hyderabad (1948)</h3>
+        After the partition of India, the State of Hyderabad, a princely state under the rule of a Nizam, chose to remain independent. The Nizam, refused to accede his state to the Union of India. The following stand-off between the Government of India and the Nizam ended on 12 September 1948 when India's then deputy Prime Minister Sardar Vallabhbhai Patel ordered Indian troops to secure the state. During five days of fighting, the Indian Army, backed by an Indian Air Force squadron of Hawker Tempest aircraft, routed the Hyderabad State forces. Five Indian Army infantry battalions and one armoured squadron were engaged in the operation. The following day, the State of Hyderabad was proclaimed as a part of the Union of India. Major General Joyanto Nath Chaudhuri, who led the Operation Polo and accepted the surrender of the Nizam's forces on 18 September 1948, was appointed the military governor of Hyderabad (1948–1949) to restore law and order.
+      </div>
+      <div>
+        <h3 id="6">Medical assistance during Korean War (1950–1953)</h3>
+        During the Korean War, India sent the 60th Indian (Parachute) Field Ambulance unit to aid the UN troops fighting against the Chinese and North Korean invasion of South Korea, though they decided against sending combat forces. The 60th PFA was included in the 1st Commonwealth Division. In the aftermath of the war, an Indian infantry brigade formed the Custodian Force of India as some of the soldiers were also sent to Korea as part of the Neutral Nations Repatriation Committee to assist in the exchange of prisoners of war. The NNRC was commanded by Lt Gen KS Thimayya
+      </div>
+      <div>
+        <h3 id="7">Annexation of Goa, Daman and Diu (1961)</h3>
+        Even though the British and French vacated all their colonial possessions in the Indian subcontinent, Portugal refused to relinquish control of its Indian colonies of Goa, Daman and Diu. After repeated attempts by India to negotiate with Portugal for the territory were spurned by Portuguese prime minister and dictator, António de Oliveira Salazar, India launched Operation Vijay on 12 December 1961 to take Goa from the Portuguese. A small contingent of its troops entered Goa, Daman, and Diu to capture and secure the territory. After a brief conflict, in which 31 Portuguese soldiers were killed, the Portuguese Navy frigate NRP Afonso de Albuquerque destroyed, and over 3,000 Portuguese captured, Portuguese General Manuel António Vassalo e Silva surrendered to Maj Gen KP Candeth (Kunhiraman Palat Kandoth) of the Indian Army, after twenty-six hours. Goa, Daman and Diu became a part of the Republic of India.
+      </div>
+       <div>
+        <h3 id="8">Sino-Indian War (1962)</h3>
+        <p>The cause of this war was a dispute over the sovereignty of the widely separated Aksai Chin and Arunachal Pradesh border regions. Aksai Chin, claimed by India to belong to Kashmir, and by China to be part of Xinjiang, contains an important road link that connects the Chinese regions of Tibet and Xinjiang. China's construction of this road was one of the triggers of the conflict.</p>
+
+<p>Small-scale clashes between Indian and Chinese forces broke out as India insisted on the disputed McMahon Line being regarded as the international border between the two countries. Chinese troops claimed not to have retaliated to the cross-border firing by Indian troops, despite sustaining losses. China's suspicion of India's involvement in Tibet created more rifts between the two countries.</p>
+
+<p>In 1962, the Indian Army was ordered to move to the Thag La ridge located near the border between Bhutan and Arunachal Pradesh and about three miles (5 km) north of the disputed McMahon Line. Meanwhile, Chinese troops had also made incursions into Indian-held territory, and tensions between the two reached a new high when Indian forces discovered a road constructed by China in Aksai Chin. After a series of failed negotiations, the People's Liberation Army attacked Indian Army positions at the Thag La ridge. This move by China caught India by surprise and by 12 October, Nehru gave orders for the Chinese to be expelled from Aksai Chin. However, poor co-ordination among various divisions of the Indian Army, and the late decision to mobilise the Indian Air Force in vast numbers, gave China a crucial tactical and strategic advantage over India. On 20 October, Chinese soldiers attacked India in both the North-West and North-Eastern parts of the border and captured vast portions of Aksai Chin and Arunachal Pradesh.</p>
+
+<p>As the fighting moved beyond disputed territories, China called on the Indian government to negotiate, however India remained determined to regain lost territory. With no peaceful agreement in sight, China unilaterally withdrew its forces from Arunachal Pradesh. The reasons for the withdrawal are disputed with India claiming various logistical problems for China and diplomatic support from the United States, while China stated that it still held territory it had staked diplomatic claim over. The dividing line between the Indian and Chinese forces was named the Line of Actual Control.</p>
+
+<p>The poor decisions made by India's military commanders and, its political leadership, raised several questions. The Henderson-Brooks & Bhagat committee was soon set up by the Government of India to determine the causes of the poor performance of the Indian Army. Its report criticised the decision not to allow the Indian Air Force to target Chinese transport lines out of fear of a Chinese aerial counter-attack on Indian civilian areas. Much of the blame was also targeted at the incompetence of then-Defence Minister, Krishna Menon who resigned from his post soon after the war ended. Despite frequent calls for its release, the Henderson-Brooks report still remains classified. Neville Maxwell has written an account of the war.</p>
+      </div>
+       <div>
+        <h3 id="9">Indo-Pakistani War of 1965</h3>
+        <p>A second confrontation with Pakistan took place in 1965. Although the war is described as inconclusive, India had the better of the war and was a clear winner in tactical and strategic terms.[40][41][42] Pakistani President Ayub Khan launched Operation Gibraltar in August 1965, during which several Pakistani paramilitary troops infiltrated into Indian-administered Kashmir and attempt to ignite an anti-India agitation in Jammu and Kashmir. Pakistani leaders believed that India, which was still recovering from the disastrous Sino-Indian War, would be unable to deal with a military thrust and a Kashmiri rebellion. India reacted swiftly and launched a counter offensive on Pakistan. Pakistan launched Operation Grand Slam in reply on 1 September, invading India's Chamb-Jaurian sector. In retaliation, the Indian Army launched a major offensive throughout its border with Pakistan, with Lahore as its prime target.</p>
+        <p>Initially, the Indian Army met with considerable success in the northern sector. After launching prolonged artillery barrages against Pakistan, India was able to capture three important mountain positions in Kashmir. By 9 September, the Indian Army had made considerable in-roads into Pakistan. India had its largest haul of Pakistani tanks when the offensive of Pakistan's 1st Armoured Division was blunted at the Battle of Asal Uttar, which took place on 10 September near Khemkaran. The biggest tank battle of the war came in the form of the Battle of Chawinda, the largest tank battle in history after World War II. Pakistan's defeat at the Battle of Asal Uttar hastened the end of the conflict</p>
+        <p>At the time of ceasefire declaration, per neutral sources, India reported casualties of about 3,000. On the other hand, it was estimated that more than 3,800 Pakistani soldiers were killed in the battle. About 200-300 Pakistani tanks were either destroyed or captured by India. India lost a total of 150-190 tanks during the conflict. The decision to return to pre-war positions, following the Tashkent Declaration, caused an outcry among the polity[who?] in New Delhi. It was widely believed that India's decision to accept the ceasefire was due to political factors, and not military, since it was facing considerable pressure from the United States and the UN to stop hostilities.</p>
+      </div>
+       <div>
+        <h3 id="10">Sino-Indian Conflict 1967</h3>
+        The 1967 Sino-Indian skirmish, also known as the Cho La incident, was a military conflict between Indian troops and members of the Chinese People's Liberation Army who had infiltrated on 1 October 1967 in Sikkim, then a protectorate of India. On 10 October, both sides clashed again. Defence Minister Sardar Swaran Singh assured the Indian people that the government was taking care of developments along the border. In the aftermath of the conflict Indian losses were 88 killed, and 163 wounded, while Chinese casualties were 300 killed and 450 wounded in Nathula, and 40 in Chola. The Chinese Army left Sikkim after being defeated by Indian troops.
+      </div>
+       <div>
+        <h3 id="11">Operation against the Naxalites during 1971</h3>
+        Under the supervision of Indira Gandhi during the president's rule in 1971, the Indian Army and the Indian police launched Operation Steeplechase, a gigantic "counter-insurgency" operation against the Naxalites, which resulted in the death of hundreds of Naxalites and the imprisonment of more than 20,000 suspects and cadres including senior leaders. The army was also assisted by a brigade of para commandos and the Indian paramilitary. The operation was organised in October 1969, and Lieutenant General J.F.R. Jacob was enjoined by Govind Narain, the home secretary of India, that "there should be no publicity and no records" and Jacob's request to be presented with written orders was also repudiated by Sam Manekshaw.
+      </div>
+       <div>
+        <h3 id="12">Bangladesh Liberation War of 1971</h3>
+       <p>An independence movement broke out in East Pakistan which was crushed by Pakistani forces. Due to large-scale atrocities against them, thousands of Bengalis took refuge in neighbouring India causing a major refugee crisis there. In early 1971, India declared its full-support for the Bengali rebels, known as Mukti Bahini, and Indian agents were extensively involved in covert operations to aid them.[citation needed]</p>
+
+<p>On 20 November 1971, the Indian Army moved the 14 Punjab Battalion 45 Cavalry into Garibpur, a strategically important town near India's border with East Pakistan, and successfully captured it. The following day, more clashes took place between Indian and Pakistani forces. Wary of India's growing involvement in the Bengali rebellion, the Pakistan Air Force (PAF) launched a preemptive strike on 10 Indian air bases at: Srinagar, Jammu, Pathankot, Amritsar, Agra, Adampur, Jodhpur, Jaisalmer, Uttarlai and Sirsa at 17:45 hours on 3 December. However, this aerial offensive failed to accomplish its stated objectives, and gave India an excuse to declare a full-scale war against Pakistan the same day. By midnight, the Indian Army, accompanied by the Indian Air Force, launched a major three-pronged assault into East Pakistan. The Indian Army won several battles on the eastern front including the decisive battle of Hilli, which was the only front where the Pakistani Army was able to build up considerable resistance. The operation also included a battalion-level airborne operation on Tangail, which resulted in the capitulation of all resistance within five days. India's massive early gains were attributed largely to the speed and flexibility with which Indian armoured divisions moved across East Pakistan.</p>
+
+<p>Pakistan launched a counter-attack against India on the western front. On 4 December 1971, the A company of the 23rd Battalion of India's Punjab Regiment detected and intercepted the movement of the 51st Infantry Brigade of the Pakistani Army near Ramgarh, Rajasthan. The battle of Longewala ensued during which the A company, though being outnumbered, thwarted the Pakistani advance until the Indian Air Force directed its fighters to engage the Pakistani tanks. By the time the battle had ended, 38 Pakistani tanks and 100 armoured vehicles were either destroyed or abandoned. About 200 Pakistani troops were killed in action during the battle while two Indian soldiers lost their lives. Pakistan suffered another major defeat on the western front during the battle of Basantar which was fought from 4 December to the 16th. By the end of the battle, about 66 Pakistani tanks were destroyed and 40 more were captured. In return, Pakistani forces were able to destroy only 11 Indian tanks. None of the many Pakistani offensives on the western front materialised. By 16 December, Pakistan had lost sizeable territory on both the eastern and western fronts.</p>
+
+<p>Under the command of Lt. General J.S. Arora, the three corps of the Indian Army, which had invaded East Pakistan, entered Dhaka and forced Pakistani forces to surrender on 16 December 1971, one day after the conclusion of the battle of Basantar. After Pakistan's Lt General A A K Niazi signed the Instrument of Surrender, India took more than 90,000 Pakistani prisoners of war. By the time of the signing, 11,000 Pakistani soldiers were killed-in-action while India suffered 3,500 battle-related deaths. In addition, Pakistan lost 220 tanks during the battle compared to India's 69.</p>
+
+<p>In 1972, the Simla Agreement was signed between the two countries and tensions simmered. However, there were occasional spurts in diplomatic tensions which culminated in increased military vigilance on both sides.</p>
+      </div>
+       <div>
+        <h3 id="13">Siachen conflict (1984)</h3>
+        <p>The Siachen Glacier, though a part of the Kashmir region, was not officially demarcated on maps prepared and exchanged between the two sides in 1947. As a consequence, prior to the 1980s, neither India nor Pakistan maintained any permanent military presence in the region. However, Pakistan began conducting and allowing a series of mountaineering expeditions to the glacier beginning in the 1950s. By the early 1980s, the Government of Pakistan was granting special expedition permits to mountaineers and United States Army maps deliberately showed Siachen as a part of Pakistan.[citation needed] This practice gave rise to the contemporary meaning of the term oropolitics.</p>
+
+<p>India, possibly irked by these developments, launched Operation Meghdoot in April 1984. An entire battalion of the Kumaon Regiment was airlifted to the glacier. Pakistani forces responded quickly and clashes between the two followed. The Indian Army secured the strategic Sia La and Bilafond La mountain passes, and by 1985 more than 1,000 square miles (2,600 km2) of territory 'claimed' by Pakistan was under Indian control. The Indian Army continues to control all the Siachen Glacier and its tributary glaciers. Pakistan made several unsuccessful attempts to regain control over Siachen. In late 1987, Pakistan mobilised about 8,000 troops and garrisoned them near Khapalu, aiming to capture Bilafond La. However, they were repulsed by Indian Army personnel guarding Bilafond. During the battle, about 23 Indian soldiers lost their lives, while more than 150 Pakistani troops perished. Further unsuccessful attempts to reclaim positions were launched by Pakistan in 1990, 1995, 1996 and 1999, most notably in Kargil that year.</p>
+
+<p>India continues to maintain a strong military presence in the region, despite extremely inhospitable conditions. The conflict over Siachen is regularly cited as an example of mountain warfare. The highest peak in the Siachen glacier region, Saltoro Kangri, could be viewed as strategically important for India because of its immense altitude which could enable the Indian forces to monitor some Pakistani or Chinese movements in the immediate area. Maintaining control over Siachen poses several logistical challenges for the Indian Army. Several infrastructure projects were constructed in the region, including a helipad at 21,000 feet (6,400 m) above the sea level. In 2004, the Indian Army was spending an estimated US$2 million a month to support its personnel stationed in the region.</p>
+      </div>
+       <div>
+        <h3 id="14">Counter-insurgency activities</h3>
+        The Indian Army has played a crucial role in the past, fighting insurgents and terrorists within the nation. The army launched Operation Blue Star and Operation Woodrose in the 1980s to combat Sikh insurgents. The army, along with some paramilitary forces, has the prime responsibility of maintaining law and order in the troubled Jammu and Kashmir region, led specifically by the Northern Command. The Indian Army also sent a contingent to Sri Lanka in 1987 as a part of the Indian Peace Keeping Force. The Indian Army also successfully conducted Operation Golden Bird in 1995 for counter-insurgency in northeast India.
+      </div>
+       <div>
+        <h3 id="15">Kargil war (1999)</h3>
+       <p>In 1998, India carried out nuclear tests and a few days later, Pakistan responded with more nuclear tests giving both countries nuclear deterrence capability, although India had tested one hydrogen bomb which Pakistan lacked. Diplomatic tensions eased after the Lahore Summit was held in 1999. However, the sense of optimism was short-lived since in mid-1999 Pakistani paramilitary forces and Kashmiri insurgents captured the deserted, but strategic, Himalayan heights in the Kargil district of India. These had been vacated by the Indian army during the onset of the inhospitable winter and were supposed to be reoccupied in spring. The regular Pakistani troops who took control of these areas received important support, both in the form of arms and supplies, from Pakistan. Some of the heights under their control, which also included the Tiger Hill, overlooked the vital Srinagar-Leh Highway (NH 1A), Batalik and Dras.</p>
+
+<p>Once the scale of the Pakistani incursion was realised, the Indian Army quickly mobilised about 200,000 troops and Operation Vijay was launched. However, since the heights were under Pakistani control, India was at a clear strategic disadvantage. From their observation posts, the Pakistani forces had a clear line-of-sight to lay down indirect artillery fire on NH 1A, inflicting heavy casualties on the Indians. This was a serious problem for the Indian Army as the highway was its main logistical and supply route. Thus, the Indian Army's first priority was to recapture peaks that were in the immediate vicinity of NH 1A. This resulted in Indian troops first targeting the Tiger Hill and Tololing complex in Dras. This was soon followed by more attacks on the Batalik-Turtok sub-sector which provided access to Siachen Glacier. Point 4590, which had the nearest view of the NH 1A, was successfully recaptured by Indian forces on 14 June
+Though most of the posts in the vicinity of the highway were cleared by mid-June, some parts of it near Drass witnessed sporadic shelling until the end of the war. Once the NH 1A area was cleared, the Indian Army turned to driving the invading force back across the Line of Control. The Battle of Tololing, among other assaults, slowly tilted the combat in India's favour. Nevertheless, some posts put up a stiff resistance, including Tiger Hill (Point 5140) that fell only later in the war. As the operation was fully under way, about 250 artillery guns were brought in to clear the infiltrators in the posts that were in the line-of-sight. At many vital points, neither artillery nor air power could dislodge the outposts manned by the Pakistan soldiers, who were out of visible range. The Indian Army mounted some direct frontal ground assaults which were slow and took a heavy toll given the steep ascent that had to be made on peaks as high as 18,000 feet (5,500 m). Two months into the conflict, Indian troops had slowly retaken most of the ridges they had lost; according to official count, an estimated 75%–80% of the intruded area, and nearly all high ground, was back under Indian control.</p>
+
+<p>Following the Washington accord on 4 July, where Sharif agreed to withdraw Pakistani troops, most of the fighting came to a gradual halt, but some Pakistani forces remained in positions on the Indian side of the LOC. In addition, the United Jihad Council (an umbrella for all extremist groups) rejected Pakistan's plan for a climb-down, instead deciding to fight on. The Indian Army launched its final attacks in the last week of July; as soon as the Drass sub-sector had been cleared of Pakistani forces, the fighting ceased on 26 July. The day has since been marked as Kargil Vijay Diwas (Kargil Victory Day) in India. By the end of the war, India had resumed control of all the territory south and east of the Line of Control, as was established in July 1972 per the Shimla Accord. By the time all hostilities had ended, the number of Indian soldiers killed during the conflict stood at 527, while more than 700 regular members of the Pakistani Army were killed. The number of Islamist fighters, also known as Mujahideen, killed by Indian Armed Forces during the conflict stood at about 3,000.</p>
+      </div>
+       <div>
+        <h3 id="16">United Nations peacekeeping missions</h3>
+        India has been the largest troop contributor to UN missions since its inception. So far India has taken part in 43 Peacekeeping missions with a total contribution exceeding 160,000 troops and a significant number of police personnel having been deployed. In 2014 India is the third largest troop contributor [TCC] with 7,860 personnel deployed with ten UN Peacekeeping Missions of which 995 are police personnel, including the first Female Formed Police Unit under the UN. The Indian Army has undertaken numerous UN peacekeeping missions. As of 30 June 2014, 157 Indians have been killed during such operations. The Indian army has also provided paramedical units to facilitate the withdrawal of the sick and wounded.
+      </div>
+       <div>
+        <h3 id="17">Indo-China Doklam Issue</h3>
+       The 2017 China India border standoff or Doklam standoff refers to the military border standoff between the Indian Armed Forces and the People's Liberation Army of China over Chinese construction of a road in Doklam near a trijunction border area, known as Donglang, or Donglang Caochang (meaning Donglang pasture or grazing field), in Chinese. On 16 June 2017 Chinese troops with construction vehicles and road-building equipment began extending an existing road southward in Doklam, a territory which is claimed by both China as well as India's ally Bhutan.[2][3][4][5][6][7] On 18 June 2017, About 270 Indian troops armed with weapons and two bulldozers crossed the Sikkim border into Doklam to stop the Chinese troops from constructing the road.[8][4][9] On 28 August, both India and China announced that they had withdrawn all their troops from the face-off site in Doklam.
+    
+            </div>
+      </div>
+      <div style="padding:8px; margin:10px;">
+          <h1 id="mission">Mission and doctrine</h1>
+          Initially, the army's main objective was to defend the nation's frontiers. However, over the years, the army has also taken up the responsibility of providing internal security, especially against insurgencies in Kashmir and the Northeast. The current combat doctrine of the Indian Army is based on effectively utilising holding formations and strike formations. In the case of an attack, the holding formations would contain the enemy and strike formations would counter-attack to neutralise enemy forces. In the case of an Indian attack, the holding formations would pin enemy forces down, whilst the strike formations attack at a point of Indian choosing. The Indian Army is large enough to devote several corps to the strike role. Currently, the army is also looking at enhancing its special forces capabilities. With the role of India increasing, and the requirement for protection of India's interests in far-off countries become important, the Indian Army and Indian Navy are jointly planning to set up a marine brigade.
+        </div>
+        <div style="padding:8px; margin:10px;">
+          <h1 id="per">Personnel</h1>
+          The Indian Army is a voluntary service, and although a provision for military conscription exists in the Indian constitution, it has never been imposed. As of 1 July 2017, the Indian Army has a sanctioned strength of <span style="color:red; font-size:24px;">49,932 officers</span> (42,253 serving with 7,679 under strength), and  <span style="color:red; font-size:24px;">1,215,049 enlisted personnel </span>(1,194,864 serving with 20,185 under strength). Recently, it has been proposed to enhance the strength of the army by more than 90,000 to counter the increasing presence of Chinese troops along the Line of Actual Control. According to the International Institute for Strategic Studies, in 2017 the army had a strength of <span style="color:red; font-size:24px;">1,200,000 active personnel</span> and <span style="color:red; font-size:24px;">960,000 reserve personnel</span>. Of those in reserve, 300,000 are first-line reserve (within 5 years of service), 500,000 are committed until the age of 50 and 160,000 were in the Indian Territorial Army, with 40,000 in regular establishment. <span style="color:red; font-size:24px;">This makes the Indian Army the world's largest standing volunteer army.</span>
+          <a target="_blank" href="https://i.ytimg.com/vi/192LU5SJevM/maxresdefault.jpg">
+            <img style="margin-top: 20px;" src="https://i.ytimg.com/vi/192LU5SJevM/maxresdefault.jpg" width="100%" height="auto"></a><br><p style="font-size: 24px; color: green; text-align:center;">Scary Indian Army</p>
+        </div>
+         <div style="padding:8px; margin:10px; ">
+           
+           <div style="border:2px solid black; padding:8px; margin:10px;">
+            <h1 id="eqp">Combat Vehicles</h1>
+           <ul>
+            <li><a href="#18">Armoured combat vehicles</a></li>
+            <li><a href="#19">Infantry fighting vehicle</a></li>
+            <li><a href="#20">Artillery</a></li>
+            <li><a href="#21">Reconnaissance vehicle</a></li>
+            <li><a href="#23">Mine protected, Mine clearing and Mine laying</a></li>
+            <li><a href="#22">Engineering and support</a></li>
+            <li><a href="#24">Utility and miscellaneous</a></li>
+            
+          </ul></div>
+           <h3 id="18">Armoured combat vehicles</h3>
+           <div  style="overflow-x:auto">
+            <table style="width:100%">
+              <tr>
+                  <th>Name</th>
+                  <th>Images</th>
+                  <th>Type</th>
+                  <th>Quantity</th>
+              </tr>
+              <tr>
+              <td>Arjun MBT(MK1)</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Arjun_MBT_bump_track_test_2.JPG/800px-Arjun_MBT_bump_track_test_2.JPG" alt="Arjun MBT(MK1)" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Main Battle Tank</td>
+              <td>248(Mk1)</td>
+            </tr>
+            <tr>
+              <td>Arjun MBT(MK2)</td>
+              <td><center>
+                <img class="myImg" src="https://vpk.name/file/img/arjun_mk_ii_010416.jpg" alt="Arjun MBT(MK2)" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Main Battle Tank</td>
+              <td>118(Mk2)</td>
+            </tr>
+            <tr>
+              <td>T-90S "Bhisma"<hr>T-90M</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Indian_Army_T-90.jpg/800px-Indian_Army_T-90.jpg" alt="T-90S" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div><br>
+                  <img class="myImg" src="https://i2.wp.com/defenceupdate.in/wp-content/uploads/2016/11/T-90.jpg?resize=1964%2C1257&ssl=1" alt="T-90M" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Main Battle Tank</td>
+              <td>2011</td>
+            </tr>
+            <tr>
+              <td>T-72 Ajeya</td>
+              <td><center>
+               <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/T-72_Ajeya1.jpg/800px-T-72_Ajeya1.jpg" alt="T-72 Ajeya" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Main Battle Tank</td>
+              <td> 2410</td>
+            </tr>
+          </table>
+          </div>
+          <h3 id="19">Infantry fighting vehicle</h3>
+            <div style="overflow-x:auto;">
+            <table style="width:100%">
+              <tr>
+                  <th>Name</th>
+                  <th>Images</th>
+                  <th>Type</th>
+                  <th>Quantity</th>
+              </tr>
+              <tr>
+              <td>BMP-2 "Sarath"</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Indian_Army_BMP-2.jpg/800px-Indian_Army_BMP-2.jpg" alt="BMP-2 Sarath" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Infantry fighting vehicle</td>
+              <td>2691</td>
+            </tr>
+            <tr>
+              <td>Abhay IFV</td>
+              <td><center>
+                <img class="myImg" src="http://4.bp.blogspot.com/-ENW6Kar3HhY/Vgv3e1mg6rI/AAAAAAAAVgI/ShUav_DTHOU/s1600/Russia_and_India_could_develop_a_new_generation_of_armoured_infantry_fighting_vehicle_640_001.jpg" alt="Abhay IFV" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Infantry fighting vehicle</td>
+              <td></td>
+            </tr>
+            </table>
+          </div>
+          <h3 id="20">Artillery</h3>
+            <div style="overflow-x:auto;">
+            <table style="width:100%">
+              <tr>
+                  <th>Name</th>
+                  <th>Images</th>
+                  <th>Type</th>
+                  <th>Quantity</th>
+              </tr>
+              <tr>
+              <td>dhanush howitzer</td>
+              <td><center>
+                <img class="myImg" src="https://i0.wp.com/defenceupdate.in/wp-content/uploads/2017/04/Dhanush.jpg?fit=600%2C338&ssl=1" alt="dhanush howitzer" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>howitzer</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>DRDO Advanced <br>Towed Artillery<br> Gun System (ATAGS)</td>
+              <td><center>
+                <img class="myImg" src="https://i0.wp.com/defenceupdate.in/wp-content/uploads/2018/02/atags.jpg?resize=1024%2C576&ssl=1" alt="DRDO Advanced Towed Artillery Gun System (ATAGS)" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td> howitzer</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>M777 howitzer</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/M777_Howitzer_Live_Fire_Exercise_%286877749752%29.jpg/1024px-M777_Howitzer_Live_Fire_Exercise_%286877749752%29.jpg" alt="M777 howitzer" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>howitzer</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Haubits FH77</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Haubits_77BMK2.JPG/1024px-Haubits_77BMK2.JPG" alt="Haubits FH77" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>howitzer</td>
+              <td>410</td>
+            </tr>
+            <tr>
+              <td>M-46</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/M-46_Lutsk.jpg/800px-M-46_Lutsk.jpg" alt="M-46" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>howitzer</td>
+              <td>900</td>
+            </tr>
+            <tr>
+              <td>D-30</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/%D0%A5%D0%B0%D1%83%D0%B1%D0%B8%D1%86%D0%B0_%D0%94-30_122%D0%BC%D0%BC.jpg/1024px-%D0%A5%D0%B0%D1%83%D0%B1%D0%B8%D1%86%D0%B0_%D0%94-30_122%D0%BC%D0%BC.jpg" alt="D-30" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>howitzer</td>
+              <td>550</td>
+            </tr>
+            <tr>
+              <td>Indian Field <br>Gun MK-1/2/3</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/IA_Artillery.jpg/800px-IA_Artillery.jpg" alt="Indian Field Gun MK 1/2/3" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>howitzer</td>
+              <td>1700</td>
+            </tr>
+            <tr>
+              <td>Light Field Gun</td>
+              <td><center>
+                <img class="myImg" src="https://qph.fs.quoracdn.net/main-qimg-1e6858c52dad095c3aff82560803dcd0" alt="Light Field Gun" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>howitzer</td>
+              <td>700+</td>
+            </tr>
+            <tr>
+              <td>FV433 Abbot SPG</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Abbot_self_propelled_gun.jpg/800px-Abbot_self_propelled_gun.jpg" alt="FV433 Abbot SPG" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Self-propelled artillery</td>
+              <td>~80</td>
+            </tr>
+            <tr>
+              <td>2S1 Gvozdika</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Ukrainian_2S1_Gvozdika_SPG.jpg/1024px-Ukrainian_2S1_Gvozdika_SPG.jpg" alt="2S1 Gvozdika" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Self-propelled artillery</td>
+              <td>110</td>
+            </tr>
+            <tr>
+              <td>K9 Thunder</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/K-9thunder.jpg/800px-K-9thunder.jpg" alt="K9 Thunder" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Self-propelled artillery</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Smerch 9K58 MBRL</td>
+              <td><center>
+                <img class="myImg" src="https://i.ytimg.com/vi/6IapR3Ye7YU/hqdefault.jpg" alt="Smerch 9K58 MBRL" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Multiple rocket launcher</td>
+              <td>62</td>
+            </tr>
+            <tr>
+              <td>Pinaka MBRL</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Pinaka.JPG/1024px-Pinaka.JPG" alt="Pinaka MBRL" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Multiple rocket launcher</td>
+              <td>54</td>
+            </tr>
+            <tr>
+              <td>BM-21</td>
+              <td><center>
+                <img class="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Russian_BM-21_Grad_in_Saint_Petersburg.JPG/800px-Russian_BM-21_Grad_in_Saint_Petersburg.JPG" alt="BM-21" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Multiple rocket launcher</td>
+              <td>150+</td>
+            </tr>
+            </table>
+          </div>
+          <h3 id="21">Reconnaissance vehicle</h3>
+           <button type="button"><a href="https://en.wikipedia.org/wiki/List_of_equipment_of_the_Indian_Army#Armoured_combat_vehicles" target="_blank">See here</a></button>
+          <h3 id="22">Engineering and support</h3>
+           <button type="button"><a href="https://en.wikipedia.org/wiki/List_of_equipment_of_the_Indian_Army#Engineering_and_support" target="_blank">See here</a></button>
+          <h3 id="23">Mine protected, Mine clearing and Mine laying</h3>
+           <button type="button"><a href="https://en.wikipedia.org/wiki/List_of_equipment_of_the_Indian_Army#Mine_protected,_Mine_clearing_and_Mine_laying" target="_blank">See here</a></button>
+          <h3 id="24"> Utility and miscellaneous</h3>
+           <button type="button"><a href="https://en.wikipedia.org/wiki/List_of_equipment_of_the_Indian_Army#Utility_and_miscellaneous" target="_blank">See here</a></button>
+         </div></div>
+         <h1 id="air">Army Aviation Corps</h1>
+              <div style="overflow-x:auto;">
+            <table style="width:100%">
+              <tr>
+                  <th>Name</th>
+                  <th>Images</th>
+                  <th>Type</th>
+                  <th>Quantity</th>
+              </tr>
+              <tr>
+              <td>HAL Dhruv</td>
+              <td><center>
+                <img class="myImg" src="https://img.etimg.com/thumb/height-480,width-640,msid-68114348,imgsize-117186/hal-delivers-first-three-dhruv-helicopters-to-indian-army.jpg" alt="HAL Dhruv" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Utility helicopter</td>
+              <td>145</td>
+            </tr>
+            <tr>
+              <td>HAL Chetak</td>
+              <td><center>
+                <img class="myImg" src="https://1.bp.blogspot.com/-DU26WMTUqb8/W0NbeLkqA-I/AAAAAAAAAH4/hPK91BEn7LMCSHla1dKDM1Mprdo0FfbJQCLcBGAs/s1600/Hal%2BChetak%2BIndian%2Bairforce%2Bhelicopter%2B-%2BTop10Indian_com.jpg" alt="HAL Chetak" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Utility helicopter</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>HAL Cheetah</td>
+              <td><center>
+                <img class="myImg" src="https://i.pinimg.com/originals/6d/d2/60/6dd26034239bec1b1f98f764c52068ed.jpg" alt="HAL Cheetah" width="300" height="200">
+                <div id="myModal" class="modal">
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  </div>
+              </center></td>
+              <td>Liaison helicopter</td>
+              <td>32</td>
+            </tr>
+            </table>
+          </div>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+function openNav() {
+  document.getElementById("mySidenav1").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  
+}
+
+function closeNav() {
+  document.getElementById("mySidenav1").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  
+}
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = $('.myImg');
+var modalImg = $("#img01");
+var captionText = document.getElementById("caption");
+$('.myImg').click(function(){
+    modal.style.display = "block";
+    var newSrc = this.src;
+    modalImg.attr('src', newSrc);
+    captionText.innerHTML = this.alt;
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+/*night mode*/
+function myFunction() {
+  
+  document.getElementById('mydiv').className = "myclass";
+  document.getElementById('mydiv1').className = "myclass1";
+   document.body.style.backgroundColor = "#111";
+  
+  var x = document.querySelectorAll("li a");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.color = "#6666ff";
+  }
+ var x = document.querySelectorAll(".div");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.border = "2px solid #DC3D24";
+    x[i].style.backgroundColor = "#fff";
+   
+  }
+  var x = document.querySelectorAll("h3");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.color = " green";
+  }
+  var x = document.querySelectorAll("h1");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.color = " #DC3D24";
+
+  }
+}
+</script>
+
+    </body>
+    </html>
